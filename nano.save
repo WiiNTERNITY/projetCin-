@@ -1,0 +1,2343 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Allez Ciné</title>
+
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+
+	<!-- Social List -->
+	<link rel="stylesheet" href="./css/socialList.css">
+
+	<!-- Age Verification CSS -->
+	<link href="css/age-verification.css" rel="stylesheet">
+
+	<!-- TO TOP CSS -->
+	<link href="css/toTop.css" rel="stylesheet">
+
+	<!-- LOGIN CSS -->
+	<link href="css/login.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+		<div class="container">
+		<div class="logo">
+				<a href="index.html"><h1>Allez<span>Ciné</span></h1></a>
+		</div>
+			<div class="search">
+				<form action="#" method="post">
+					<input type="text" name="Search" placeholder="Rechercher" required="">
+					<input type="submit" value="Go">
+				</form>
+			</div>
+
+			<div class="enregistrement">
+				<ul>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+000) 123 345 653</li>
+					<li>
+						<button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+
+						<div id="login" class="modal">
+
+						  <form class="modal-content animate" action="/login.php">
+
+
+						    <div class="container">
+						      <label><b>Username</b></label>
+						      <input type="text" placeholder="Enter Username" name="uname" required>
+
+						      <label><b>Password</b></label>
+						      <input type="password" placeholder="Enter Password" name="psw" required>
+
+						      <button type="submit">Login</button>
+						      <input type="checkbox" checked="checked"> Remember me
+						    </div>
+
+						    <div class="container" style="background-color:#f1f1f1">
+						      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+						      <span class="psw">Forgot <a href="#">password?</a></span>
+						    </div>
+						  </form>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+			<!-- nav -->
+
+		</div>
+</div>
+<div class="movies_nav">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<li>
+									<div class="col-sm-12">
+										<ul class="multi-column-dropdown">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Aventures</a></li>
+											<li><a href="#">Policiers</a></li>
+											<li><a href="#">...</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">Series</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</nav>
+		</div>
+</div>
+	<!-- //nav -->
+
+<!-- Social START -->
+<div class="general_social_icons">
+	<nav class="social">
+		<ul>
+			<li class="w3_twitter"><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+			<li class="w3_facebook"><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
+			<li class="w3_dribbble"><a href="#">Dribbble <i class="fa fa-dribbble"></i></a></li>
+			<li class="w3_g_plus"><a href="#">Google+ <i class="fa fa-google-plus"></i></a></li>
+		</ul>
+  </nav>
+</div>
+<!-- Social END -->
+
+<!-- 1er section -->
+<section class="general">
+
+		<div class="container">
+			<h4 class="latest-text w3_latest_text">Featured Movies</h4>
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Tous</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Actions</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Policiers</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film1.jpg" title="album-name" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film4.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>						</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film5.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film6.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film7.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film9.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film10.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film11.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film12.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+				    </div>
+
+			  
+			   <div class="container"><a href="#plusDeFilms" class="bt_plus" data-toggle="collapse" data-target="#plusDeFilms">PLUS DE FILMS</a></div>
+			   <div id="plusDeFilms" class="collapse">
+			   		<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Moana" class="img-responsive" alt=" " />	
+
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Moana</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Moana" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+
+
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Moana" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film11.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film6.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film10.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film12.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film1.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+					
+			    </div>
+
+			</div>
+	</div>
+</div>
+</section>
+
+<!-- Fin de 1ere section -->
+
+<!-- 2em section -->
+<section class="general">
+
+		<div class="container">
+			<h4 class="latest-text w3_latest_text">Featured Movies</h4>
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Tous</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Actions</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Policiers</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film5.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film7.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film9.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film11.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<div class="container"><a href="#" class="bt_plus" data-toggle="collapse" data-target="#plusDeTV">PLUS DE SERIES TV</a></div>
+			   <div id="plusDeTV" class="collapse">
+			   		<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film1.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film5.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film7.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+			    </div>
+
+
+
+				    </div>
+
+
+
+			</div>
+	</div>
+</div>
+</section>
+
+<!-- Fin de 2eme section -->
+
+<!-- 3eme section -->
+<section class="general">
+
+		<div class="container">
+			<h4 class="latest-text w3_latest_text">SHOP Movies</h4>
+			<div class="slider">
+
+				<div class="shop_movies">
+					<ul class="slides">
+						<li>
+							<div class="shop_haut">
+								<div class="col-md-6 image_gauche t">
+									<div class="w3ls_market_video_grid1">
+										<img src="images/h1-1.jpg" alt=" " class="img-responsive" />
+										<a class="w3_play_icon" href="#small-dialog">
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 rectangle_orange">
+									<p class="title">Civil War Captain America</p>
+									<p class="fexi_header_para"><span class="conjuring_w3">Résumé<label>:</label></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptatem alias placeat vero facilis est, ipsum ducimus itaque, ut, aut beatae nobis quibusdam officia rerum iure in dolorem temporibus deserunt.</p>
+									<p class="fexi_header_para"><span>Date de sortie<label>:</label></span> May 10, 2016 </p>
+									<p class="fexi_header_para">
+										<span>Genres<label>:</label> </span>
+										<a href="genres.html">Action</a> | 
+										<a href="genres.html">Aventure</a>
+									</p>
+									<label>Prix :</label></span> 17 Euros </p>
+									
+								</div>
+							</div>
+							<div class="shop_bas">
+								<div id="myTabContent" class="tab-content">
+
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+
+								   		 </div>
+								
+							</div>
+						</li>
+					</ul>
+				</div> <!-- Fin flexslider -->
+			</div> <!-- Fin div slider-->
+
+		</div>	<!-- Fin container -->
+
+</section><!-- Fin section slider-->
+
+<!-- contact section -->
+<section class="general">
+
+		<div class="container contact">
+			<h4 class="latest-text w3_latest_text">CONTACT US</h4>
+
+		
+			<div class="col-md-3 carre_noir">
+				<h2>Adresse</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+			<div class="col-md-3 carre_noir">
+				<h2>Call</h2>
+				<ul>
+					<li>(+000) 123 345 653</li>
+					<li>(+000) 123 345 653</li>
+					<li>(+000) 123 345 653</li>
+				</ul>
+			</div>
+			<div class="col-md-3 carre_noir">
+				<h2>Email</h2>
+				<ul>
+					<li><a href="mailto:contact@allezcine.com">contact@allezcine.com</a></li>
+					<li><a href="mailto:contact@allezcine.com">contact@allezcine.com</a></li>
+					<li><a href="mailto:contact@allezcine.com">contact@allezcine.com</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 carre_noir">
+				<h2>Social Media</h2>
+			</div>
+		</div>	
+
+		</div>
+
+
+</section>
+<!-- Fin contact section -->
+
+<!-- footer -->
+<footer>
+
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer_grille">
+				<div class="col-md-6 footer_left">
+					<h2>Subscribe to us</h2>
+					<div class="">
+						
+						<div class="footer_contour">
+							<form action="#" method="post">
+								<input type="email" name="email" placeholder="Ton email..." required="">
+								<input type="submit" value="Send">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 footer_right">
+					
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-5 footer_right_left">
+				<p>&copy; 2017 Allez Ciné. All rights reserved | Design by LuMat</p>
+			</div>
+			<div class="col-md-7 footer_right">
+				<ul>
+					<li>
+						<a href="genres.html">Movies</a>
+					</li>
+					<li>
+						<a href="faq.html">FAQ</a>
+					</li>
+					<li>
+						<a href="horror.html">Action</a>
+					</li>
+					<li>
+						<a href="genres.html">Adventure</a>
+					</li>
+					<li>
+						<a href="comedy.html">Comedy</a>
+					</li>
+					<li>
+						<a href="icons.html">Icons</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</footer>
+<!-- FIN footer -->
+
+<!-- TO TOP START -->
+<button onclick="toTop()" id="toTop" title="Go to top"> <img src="./images/arrow1.png" alt="top"> </button>
+<!-- TO TOP END -->
+
+<!-- AGE VERIFICATION -->
+<script type="text/javascript" src="js/age-verification.js"></script>
+<script type="text/javascript" src="js/toTop.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Allez Ciné</title>
+
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+
+	<!-- Social List -->
+	<link rel="stylesheet" href="./css/socialList.css">
+
+	<!-- Age Verification CSS -->
+	<link href="css/age-verification.css" rel="stylesheet">
+
+	<!-- TO TOP CSS -->
+	<link href="css/toTop.css" rel="stylesheet">
+
+	<!-- LOGIN CSS -->
+	<link href="css/login.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+		<div class="container">
+		<div class="logo">
+				<a href="index.html"><h1>Allez<span>Ciné</span></h1></a>
+		</div>
+			<div class="search">
+				<form action="#" method="post">
+					<input type="text" name="Search" placeholder="Rechercher" required="">
+					<input type="submit" value="Go">
+				</form>
+			</div>
+
+			<div class="enregistrement">
+				<ul>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+000) 123 345 653</li>
+					<li>
+						<button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+
+						<div id="login" class="modal">
+
+						  <form class="modal-content animate" action="/login.php">
+
+
+						    <div class="container">
+						      <label><b>Username</b></label>
+						      <input type="text" placeholder="Enter Username" name="uname" required>
+
+						      <label><b>Password</b></label>
+						      <input type="password" placeholder="Enter Password" name="psw" required>
+
+						      <button type="submit">Login</button>
+						      <input type="checkbox" checked="checked"> Remember me
+						    </div>
+
+						    <div class="container" style="background-color:#f1f1f1">
+						      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+						      <span class="psw">Forgot <a href="#">password?</a></span>
+						    </div>
+						  </form>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+			<!-- nav -->
+
+		</div>
+</div>
+<div class="movies_nav">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Films <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<li>
+									<div class="col-sm-12">
+										<ul class="multi-column-dropdown">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Aventures</a></li>
+											<li><a href="#">Policiers</a></li>
+											<li><a href="#">...</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">Series</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</nav>
+		</div>
+</div>
+	<!-- //nav -->
+
+<!-- Social START -->
+<div class="general_social_icons">
+	<nav class="social">
+		<ul>
+			<li class="w3_twitter"><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+			<li class="w3_facebook"><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
+			<li class="w3_dribbble"><a href="#">Dribbble <i class="fa fa-dribbble"></i></a></li>
+			<li class="w3_g_plus"><a href="#">Google+ <i class="fa fa-google-plus"></i></a></li>
+		</ul>
+  </nav>
+</div>
+<!-- Social END -->
+
+<!-- 1er section -->
+<section class="general">
+
+		<div class="container">
+			<h4 class="latest-text w3_latest_text">Featured Movies</h4>
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Tous</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Actions</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Policiers</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film1.jpg" title="album-name" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film4.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>						</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film5.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film6.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film7.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film9.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film10.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film11.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film12.jpg" title="God’s Compass" class="img-responsive" alt=" " />	
+
+								</a>
+
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">God’s Compass</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+				    </div>
+
+			  
+			   <div class="container"><a href="#plusDeFilms" class="bt_plus" data-toggle="collapse" data-target="#plusDeFilms">PLUS DE FILMS</a></div>
+			   <div id="plusDeFilms" class="collapse">
+			   		<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Moana" class="img-responsive" alt=" " />	
+
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Moana</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Moana" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+
+
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Moana" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film11.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film6.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film10.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film12.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film1.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+					
+			    </div>
+
+			</div>
+	</div>
+</div>
+</section>
+
+<!-- Fin de 1ere section -->
+
+<!-- 2em section -->
+<section class="general">
+
+		<div class="container">
+			<h4 class="latest-text w3_latest_text">Featured Movies</h4>
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Tous</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Actions</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Policiers</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film5.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film7.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film9.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film11.jpg" title="Durty Grandpa" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Durty Grandpa</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin d'1 film-->
+						<div class="container"><a href="#" class="bt_plus" data-toggle="collapse" data-target="#plusDeTV">PLUS DE SERIES TV</a></div>
+			   <div id="plusDeTV" class="collapse">
+			   		<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film1.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film2.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film5.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film8.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film3.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+					<!-- 1 film -->
+						<div class="film">
+							<div class="col-md-2 grille_films">
+
+
+								<a href="details.html" class=""><img src="images/film7.jpg" title="Red Along" class="img-responsive" alt=" " />	
+
+
+								</a>
+								<div class="details_films">
+									<div class="film-title">
+										<h6><a href="single.html">Red Along</a></h6>
+									</div>
+									<div class="date">
+										<p>2016</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!-- Fin d'1 film-->
+			    </div>
+
+
+
+				    </div>
+
+
+
+			</div>
+	</div>
+</div>
+</section>
+
+<!-- Fin de 2eme section -->
+
+<!-- 3eme section -->
+<section class="general">
+
+		<div class="container">
+			<h4 class="latest-text w3_latest_text">SHOP Movies</h4>
+			<div class="slider">
+
+				<div class="shop_movies">
+					<ul class="slides">
+						<li>
+							<div class="shop_haut">
+								<div class="col-md-6 image_gauche t">
+									<div class="w3ls_market_video_grid1">
+										<img src="images/h1-1.jpg" alt=" " class="img-responsive" />
+										<a class="w3_play_icon" href="#small-dialog">
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6 rectangle_orange">
+									<p class="title">Civil War Captain America</p>
+									<p class="fexi_header_para"><span class="conjuring_w3">Résumé<label>:</label></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptatem alias placeat vero facilis est, ipsum ducimus itaque, ut, aut beatae nobis quibusdam officia rerum iure in dolorem temporibus deserunt.</p>
+									<p class="fexi_header_para"><span>Date de sortie<label>:</label></span> May 10, 2016 </p>
+									<p class="fexi_header_para">
+										<span>Genres<label>:</label> </span>
+										<a href="genres.html">Action</a> | 
+										<a href="genres.html">Aventure</a>
+									</p>
+									<label>Prix :</label></span> 17 Euros </p>
+									
+								</div>
+							</div>
+							<div class="shop_bas">
+								<div id="myTabContent" class="tab-content">
+
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+											<!-- 1 film -->
+											<div class="film film2">
+												<div class="col-md-2 grille_films">
+
+													<a href="details.html" class=""><img src="images/film1.jpg" title="Survive" class="img-responsive" alt=" " />
+
+													</a>
+													<div class="details_films">
+														<div class="film-title">
+															<h6><a href="single.html">Survive</a></h6>
+														</div>
+														<div class="date">
+															<p>2016</p>
+														</div>
+														<div class="prix">
+															<p>14 Euros</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Fin d'1 film-->
+
+								   		 </div>
+								
+							</div>
+						</li>
+					</ul>
+				</div> <!-- Fin flexslider -->
+			</div> <!-- Fin div slider-->
+
+		</div>	<!-- Fin container -->
+
+</section><!-- Fin section slider-->
+
+<!-- contact section -->
+<section class="general">
+
+		<div class="container contact">
+			<h4 class="latest-text w3_latest_text">CONTACT US</h4>
+
+		
+			<div class="col-md-3 carre_noir">
+				<h2>Adresse</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+			<div class="col-md-3 carre_noir">
+				<h2>Call</h2>
+				<ul>
+					<li>(+000) 123 345 653</li>
+					<li>(+000) 123 345 653</li>
+					<li>(+000) 123 345 653</li>
+				</ul>
+			</div>
+			<div class="col-md-3 carre_noir">
+				<h2>Email</h2>
+				<ul>
+					<li><a href="mailto:contact@allezcine.com">contact@allezcine.com</a></li>
+					<li><a href="mailto:contact@allezcine.com">contact@allezcine.com</a></li>
+					<li><a href="mailto:contact@allezcine.com">contact@allezcine.com</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 carre_noir">
+				<h2>Social Media</h2>
+			</div>
+		</div>	
+
+		</div>
+
+
+</section>
+<!-- Fin contact section -->
+
+<!-- footer -->
+<footer>
+
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer_grille">
+				<div class="col-md-6 footer_left">
+					<h2>Subscribe to us</h2>
+					<div class="">
+						
+						<div class="footer_contour">
+							<form action="#" method="post">
+								<input type="email" name="email" placeholder="Ton email..." required="">
+								<input type="submit" value="Send">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 footer_right">
+					
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="col-md-5 footer_right_left">
+				<p>&copy; 2017 Allez Ciné. All rights reserved | Design by LuMat</p>
+			</div>
+			<div class="col-md-7 footer_right">
+				<ul>
+					<li>
+						<a href="genres.html">Movies</a>
+					</li>
+					<li>
+						<a href="faq.html">FAQ</a>
+					</li>
+					<li>
+						<a href="horror.html">Action</a>
+					</li>
+					<li>
+						<a href="genres.html">Adventure</a>
+					</li>
+					<li>
+						<a href="comedy.html">Comedy</a>
+					</li>
+					<li>
+						<a href="icons.html">Icons</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</footer>
+<!-- FIN footer -->
+
+<!-- TO TOP START -->
+<button onclick="toTop()" id="toTop" title="Go to top"> <img src="./images/arrow1.png" alt="top"> </button>
+<!-- TO TOP END -->
+
+<!-- AGE VERIFICATION -->
+<script type="text/javascript" src="js/age-verification.js"></script>
+<script type="text/javascript" src="js/toTop.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

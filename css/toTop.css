@@ -1,0 +1,18 @@
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  width: 50px;
+}
+
+#toTop:hover {
+  border: 1.5px solid #ff8d1b;
+}

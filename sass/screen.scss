@@ -1,0 +1,679 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$orange : #FF8D1B;
+
+
+body {
+
+	font-size: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #ffffff;
+    margin: 0;
+
+
+
+
+	.header {
+	    padding: 1em 0;
+	    border-top: 3px solid $orange;
+
+		.container {
+
+			width: 80%;
+
+				.logo{
+
+					 float: left;
+
+						a {
+						    display: block;
+							text-decoration: none;
+
+							 h1 {
+							    font-size: 1.8em;
+							    color: #212121;
+							    text-transform: uppercase;
+							    background: url(../images/1.jpg) no-repeat 80px 6px;
+							    padding-right: 1.67em;
+							    font-weight: 900;
+							    padding-bottom: .3em;
+
+							    span {
+							    color: #FF8D1B;
+							    font-size: 1em;
+							    display: block;
+							    font-weight: 300;
+							    letter-spacing: 5px;
+							    text-align: right;
+							    line-height: -1;
+							}
+
+
+							  }
+
+							}
+
+				    }
+
+
+				.search {
+				    float: left;
+				    width: 40%;
+				    margin-left: 9em;
+				    margin-top: .7em;
+
+
+					input[type="text"] {
+					    outline: none;
+					    border: none;
+					    background: #EFEFEF;
+					    padding: 10px;
+					    text-align: center;
+					    font-size: 14px;
+					    color: #999;
+					    width: 78%;
+					    float: left;
+					    border-top-left-radius: 25px;
+					    border-bottom-left-radius: 25px;
+					}	
+					
+					input[type="submit"] {
+					    outline: none;
+					    border: none;
+					    background: #212121;
+					    padding: 10px 0;
+					    font-size: 14px;
+					    color: #fff;
+					    width: 22%;
+					    border-top-right-radius: 25px;
+					    border-bottom-right-radius: 25px;
+					    margin-top: 8px;
+					}
+					
+				}
+
+				.enregistrement {
+
+						    float: right;
+						    margin-top: 1em;
+						    //width: 25%;
+
+						    li {
+						    	    padding-right: 1em;
+						    	    display: inline-block;
+									color: #212121;
+									font-size: 1em;
+
+									i { padding-right: 1em;}
+
+									a {
+									  
+										    color: #fff;
+										    display: inline-block;
+										    text-transform: uppercase;
+										    text-decoration: none;
+										    background: #FF8D1B;
+										    text-align: center;
+										    padding: 6px 30px;
+										    font-weight: bold;
+								
+									}
+
+						 	}
+
+					}
+
+
+		}
+
+	}
+
+
+	.navbar {
+
+		margin-bottom: 0px;
+
+	}
+
+
+	.movies_nav {
+	    background: #FF8D1B;
+
+			.navbar-default {
+			    background: none;
+			    border: none;
+				}
+
+				.navbar-left {
+				    float: none !important;
+				}
+
+			.navbar-nav {
+			    float: none;
+			    margin: 0;
+
+
+					li {
+				    float: left;
+				    border-right: 1px dotted #fff;
+				    width: 14.27%;
+				    text-align: center;
+
+
+				    	a{
+				    		color: #fff;
+							text-transform: uppercase;
+
+							&:hover {
+				    		color: #fff;
+							background-color: #212121;
+							}
+
+							&:focus {
+				    		color: #fff;
+							background-color: #212121;
+				    	}
+
+				    	}	
+
+
+				    &:active {
+						  border-right: none;
+						}	
+
+
+				}
+				
+				.open .dropdown-menu {
+				
+					position: absolute;
+					top: 100%;
+					left: 0;
+					z-index: 1000;
+				
+					float: left;
+					min-width: 160px;
+					padding: 0px 0;
+					margin: 2px 0 0;
+					    margin-top: 0px;
+					font-size: 14px;
+					text-align: left;
+					list-style: none;
+					background-color: #fff;
+					-webkit-background-clip: padding-box;
+					background-clip: padding-box;
+					border: 0px solid #ccc;
+					border: 0px solid rgba(0, 0, 0, .15);
+					border-radius: 0px;
+					    border-top-left-radius: 0px;
+					    border-top-right-radius: 0px;
+					-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+					box-shadow: 0 0px 0px rgba(0, 0, 0, .175);
+
+					li {
+						background-color: $orange;
+						width: 100%;
+						margin-bottom: 1px;
+						border-right: 0px;
+						padding: 10px 15px;
+							
+							a {
+							display: block;
+							
+
+							&:hover  {
+								display: block;
+								background-color: $orange;
+								
+							}
+							&:focus  {
+								background-color: $orange;
+							}
+
+						}
+
+
+					}
+						
+				}
+
+			}
+
+			.navbar-collapse.collapse {
+				    width: 100%;
+				}
+
+
+	}
+
+		
+	section{
+
+			h4.latest-text {
+		    border-left: 5px solid #ff8d1b;
+		    font-size: 2em;
+		    color: #212121;
+		    text-transform: uppercase;
+		    margin-bottom: 1em;
+		    margin-top: 1em;
+		    margin-left: -100px;
+		    padding: 0.3em 0.5em;
+		    text-align: left;
+
+
+			
+		    
+			}
+
+
+
+
+			ul#myTab {
+			    border: none;
+			    margin-bottom: 2em;
+			    	li{
+			    	float: left;
+					margin-bottom: -1px;
+
+						   a{
+
+							background: #f3f1f1;
+							border: none;
+							border-radius: 0;
+							font-size: 16px;
+							color: black;
+							padding: 10px 20px;
+							-webkit-transition: all 0.3s ease-in-out 0s;
+							-o-transition: all 0.3s ease-in-out 0s;
+							transition: all 0.3s ease-in-out 0s;
+
+									&:hover, &:focus{
+										background-color: #FF8D1B;
+										border: none;
+										border-radius: 0;
+										color: #fff !important;
+									       }
+							}
+
+						}
+
+					}
+
+				}
+
+
+		.container {
+
+
+			text-align: center;
+
+				.date {
+					text-align: left;
+				}
+
+
+				.plusDeFilms {
+					margin-top: 50px;
+					
+
+				}
+
+				.bt_plus {
+				color: #fff;
+				display: inline-block;
+				text-transform: uppercase;
+				text-decoration: none;
+				background: #FF8D1B;
+				text-align: center;
+				padding: 15px 40px;
+				font-weight: bold;	
+				margin: auto;	
+				margin-bottom: 50px;	 
+ 	           }
+
+
+
+				
+			.film {
+
+					.img-responsive{
+				    
+				   		 height: 230px;
+					}
+
+				
+					h6 a {
+
+						margin-top: 10px !important;
+						padding-bottom:5px;
+						color: black;
+						display: block;
+						text-align: center;
+
+								
+						}
+
+						.details_films {
+								margin-bottom: 30px;
+								display: block;
+								}
+						
+						.date {
+							 font-size: 0.8em;
+							 float: left;
+
+						}
+
+						.prix {
+							 font-size: 0.8em;
+							 color: $orange;
+							 float: right;
+							 padding-right:20px;
+
+						}
+
+						.col-md-2 {
+				
+			   				 padding: 0px;
+   					  }
+
+					}
+
+				.carousel {
+				    margin-bottom: 0;
+				    margin-top: 40px;
+				    padding: 20px;
+				    border: solid 1px #dadada;
+				 	 display: -webkit-flex; /* Safari */
+				    -webkit-align-items: center; /* Safari 7.0+ */
+				    display: flex;
+				    align-items: center;
+				    margin-left: 37px;
+
+				    	.col-md-2-5 {
+				    		 position: relative;
+							 float: left;
+							 width: 20%;
+							 padding-left: 15px;
+							 padding-right: 15px;
+						}
+
+						.col-md-11{
+
+							
+							width: 90%;
+
+						}		
+
+				}
+				
+			}
+					
+
+
+		}
+
+		//contact 
+	
+		.contact {
+			
+				
+
+			.carre_noir {
+				
+				
+				background: #212121;
+				
+				height: 220px;
+				padding:15px;
+				padding-bottom: 15px;
+				color: white;
+				text-align: left;
+
+					h2{font-size: 20px;}
+
+					ul {
+
+						
+
+						li{
+							padding-top: 5px;
+							font-size: 15px;
+
+								a {
+									color: white;
+									&:hover {color: $orange;}		
+								 }
+								 .btn:hover {
+								 	color: white;
+								 }
+						  	}
+				
+						}
+
+					.rond_orange {
+
+						width: 50px;
+						height: 50px;
+						-webkit-border-radius: 50px;
+						-moz-border-radius: 50px;
+						border-radius: 50px;
+						background-color: $orange;
+						text-align: center;
+						line-height: 55px;
+						margin: auto;
+						margin-top: -35px;
+
+							i {
+								font-size: 25px;
+							}
+					}
+
+					}
+
+				}
+
+
+		//formulaire
+					.form_bas{
+
+						margin-top: 32px;
+
+						.form-group {
+								
+							padding: 5px;
+
+							input {
+								border-radius: 0px;	
+							}
+
+							textarea {
+								border-radius: 0px;	
+							}
+
+
+							input[type="text"]{
+								padding: 5px;
+	
+							}
+
+
+						}
+	
+
+							.btn-primary {
+								color: #fff;
+								background-color: black;
+								border-color: #2c0219;
+								border-radius: 0px;
+								border: 0px;
+								text-align: left;
+								float: left;
+								margin: 20px 0px 15px;
+
+										&:hover{
+										background-color: $orange;
+										}
+
+
+									}
+
+
+
+							}
+
+		
+
+		footer {
+
+			background: #212121;
+			padding: 4em 0;
+			color: white;
+
+					h2 {
+					    font-size: 2em;
+					    color: #FF8D1B;
+					    text-transform: uppercase;
+					    font-style: normal;
+					    margin-bottom: .5em;
+					    
+					}
+
+					input[type="email"] {
+					    outline: none;
+					    padding: 10px 10px;
+					    font-size: 14px;
+					    color: #999;
+					    width: 74.1%;
+					    background: #fff;
+					    border: none;
+					}
+
+					input[type="submit"] {
+					    outline: none;
+					    width: 25%;
+					    background: #FF8D1B;
+					    font-size: 14px;
+					    text-transform: uppercase;
+					    color: #fff;
+					    border: none;
+					    padding: 10px 0;
+
+					}
+
+					.footer_contour {
+					   
+					    border: 1px solid #fff;
+					    padding: 10px;
+					}
+
+					
+					.footer_grille {
+					    padding-bottom: 2em;
+					    border-bottom: 1px solid #999;
+					    margin-bottom: 2em;
+					}
+					
+					.footer_left {
+
+
+
+							p {
+						    color: #999;
+						    line-height: 1.8em;
+							}
+
+
+
+					}
+
+
+
+					.footer_right {
+
+					    text-align: right;
+
+					    	li {
+							    display: inline-block;
+							    margin-left: 1em;
+
+									    a {
+										    color: #fff;
+										    text-decoration: none;
+										    text-transform: uppercase;
+
+										    &:hover {color:$orange;}
+										 }
+
+							 }
+					 
+					
+						}
+
+				}
+
+		//Shop movies
+		.shop_movies {
+
+			.shop_haut {
+
+						padding-bottom: 15px;
+						color: white;
+						text-align: left;
+
+							.title {
+						    text-transform: uppercase;
+						    font-size: 1.3em;
+						    color: #212121;
+						    font-weight: bold;
+						    padding-bottom: 1em;
+							}
+
+							.image_gauche {
+								padding:0px;
+							}
+							
+							.rectangle_orange {
+						    background: $orange;
+						    min-height: 321px;
+						    padding: 3em 0 0 3em;
+						    margin-bottom: 15px;
+						    width: 48.6%;
+
+
+							.slides img {
+								    width: 100%;
+								    display: block;
+							}
+
+							a {color:black;}
+
+							p {
+							    margin: 0 0 10px;
+							}
+						
+						}
+
+
+
+					.shop_bas{
+
+
+					}
+		
+
+				}
+
+	
+
+
+
+
+	
+	
+}
